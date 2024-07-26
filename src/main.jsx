@@ -15,8 +15,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <Router>
       <Routes>
         <Route path="/" element={<UserSide />} />
-        <Route path="/admin" element={<AdminSide />} />
-        <Route path="admin/addImage" element={<ImageUpload />} />
+        <Route path="/adhilfouzikanthapuram" element={<AdminSide />} />
+        <Route path="adhilfouzikanthapuram/addimage" element={<ImageUpload />} />
       </Routes>
     </Router>
   </React.StrictMode>

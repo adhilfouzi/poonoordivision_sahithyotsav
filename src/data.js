@@ -1,5 +1,7 @@
 const categories = ['Lower Primary', 'Upper Primary', 'High School', 'Higher Secondary', 'Junior', 'Senior', 'General'];
-const sectors = ['Kuttikkattoor', 'Cherooppa', 'Perumanna', 'Thathoor', 'Peruvayal', 'Chaththamnagalam', 'Perya', 'Kaniyath'];
+const sectors =[
+  "Elettil",  "Kanthapuram",  "Kizhakkoth",  "Unnikulam",  "Poonoor",  "Thalayad", "Avilora"
+];['ELETTIL', 'KANTHAPURAM', 'Perumanna', 'Thathoor', 'Peruvayal', 'Chaththamnagalam', 'Perya', 'Kaniyath'];
 
 const itemsByCategory = {
   'Lower Primary': ['Elocution', 'Madh Song', 'Quiz', 'Story Telling', 'Pencil Drawing', 'Water Color', 'Language Game', 'Reading Ml', 'Reading Arb-Ml', 'Book Test', 'Pencil Drawing G', 'Water Color G', 'Handwriting M G'],
@@ -12,12 +14,18 @@ const itemsByCategory = {
 };
 
 const slides = [
-  "https://res.cloudinary.com/do0mvctrk/image/upload/v1721982139/SSF_Kunnamangalam_Division_30th_Edition_Sahityotsav_2023July_01_02At_Kunnamangalam_sahityotsav2023_sahityotsav_30th_edition_arts_culture_literature_revolution_students_knowledge_competetion_winner_spi_zjcq6h.jpg",
-  "https://res.cloudinary.com/do0mvctrk/image/upload/v1721982139/357480395_572652891493163_603989940549611415_n_nyk12s.jpg",
-  "https://res.cloudinary.com/do0mvctrk/image/upload/v1721982139/358020129_2541173729369497_4997410294927867411_n_vudwn3.jpg",
-  "https://res.cloudinary.com/do0mvctrk/image/upload/v1721982139/SSF_Kunnamangalam_Division_30th_Edition_Sahityotsav_2023July_01_02At_Kunnamangalam_sahityotsav2023_sahityotsav_30th_edition_arts_culture_literature_revolution_students_knowledge_competetion_winner_spi_zjcq6h.jpg",
-  "https://res.cloudinary.com/do0mvctrk/image/upload/v1721982139/SSF_Kunnamangalam_Division_30th_Edition_Sahityotsav_2023July_01_02At_Kunnamangalam_sahityotsav2023_sahityotsav_30th_edition_arts_culture_literature_revolution_students_knowledge_competetion_winner_1_jwnfab.jpg",
-  "https://res.cloudinary.com/do0mvctrk/image/upload/v1721982139/SSF_Kunnamangalam_Division_30th_Edition_Sahityotsav_2023July_01_02At_Kunnamangalam_sahityotsav2023_sahityotsav_30th_edition_arts_culture_literature_revolution_students_knowledge_competetion_winner_2_gywuvn.jpg",
-  "https://res.cloudinary.com/do0mvctrk/image/upload/v1721982138/SSF_Kunnamangalam_Division_30th_Edition_Sahityotsav_2023July_01_02At_Kunnamangalam_sahityotsav2023_sahityotsav_30th_edition_arts_culture_literature_revolution_students_knowledge_competetion_winner_3_rh0wn1.jpg",
+'https://res.cloudinary.com/do0mvctrk/image/upload/v1722024459/Screenshot_2023-07-01_22-48-31_z4jexl.png',
+'https://res.cloudinary.com/do0mvctrk/image/upload/v1722024457/Screenshot_2023-07-02_09-25-37_pcf8sa.png',
+'https://res.cloudinary.com/do0mvctrk/image/upload/v1722024430/Screenshot_2023-07-02_18-31-20_bvjhyo.png',
+'https://res.cloudinary.com/do0mvctrk/image/upload/v1722024430/Screenshot_2023-07-02_09-40-18_pa5zxk.png',
+'https://res.cloudinary.com/do0mvctrk/image/upload/v1722024428/Screenshot_2023-07-02_21-56-16_eepzal.png'
 ];
-export {categories,sectors,itemsByCategory ,slides}
+const Gallery=[
+  'https://res.cloudinary.com/do0mvctrk/image/upload/v1722025935/WhatsApp_Image_2024-07-23_at_11.38.02_a4e50007_x0mx4v.jpg',
+  'https://res.cloudinary.com/do0mvctrk/image/upload/v1722025935/image3_nlxvbo.jpg',
+  'https://res.cloudinary.com/do0mvctrk/image/upload/v1722025934/image2_xgkllp.jpg',
+  'https://res.cloudinary.com/do0mvctrk/image/upload/v1722025934/image1_papndj.jpg',
+  'https://res.cloudinary.com/do0mvctrk/image/upload/v1722025933/image_pnv27d.jpg',
+  'https://res.cloudinary.com/do0mvctrk/image/upload/v1722025934/WhatsApp_Image_2024-07-26_at_21.04.13_e62b727e_cawnig.jpg'
+]
+export {categories,sectors,itemsByCategory ,slides,Gallery}

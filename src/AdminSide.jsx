@@ -66,7 +66,7 @@ function AdminSide() {
   <h2 className="text-3xl lg:text-4xl font-bold mb-4 lg:mb-0">Upload Results Here</h2>
   <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto text-center">
     <button 
-      onClick={() => navigate('/admin/AddImage')}
+      onClick={() => navigate('/adhilfouzikanthapuram/addimage')}
       className="px-4 py-2 bg-black text-white font-semibold rounded-md hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-opacity-50"
     >
       Add Image

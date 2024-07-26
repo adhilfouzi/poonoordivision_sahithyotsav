@@ -1,4 +1,5 @@
 import React from 'react'
+import { Gallery } from './data'
 
 function Footer() {
   return (
@@ -11,7 +12,7 @@ function Footer() {
         <p className="text-lg lg:text-xl font-thin">
           "SSF Kerala's Sahityotsav is an annual literary festival celebrating
           the rich cultural and literary heritage of Kerala, organized by the
-          Sunni Students' Federation (SSF) Kerala. The Kunnamangalam division's
+          Sunni Students' Federation (SSF) Kerala. The poonoor division's
           theme for this year is 'Travel,' inviting participants to delve into
           the literary and cultural dimensions of journeys and voyages. This
           event serves as a vibrant platform for writers, poets, scholars, and
@@ -24,21 +25,16 @@ function Footer() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-16 px-10 xl:px-56">
-        <img
-          src="/image.jpg"
+      {Gallery.map((image,index)=>(
+          <img
+          key={`image${index+1}`}
+          src={image}
           className="object-cover h-full w-full rounded-md"
           alt="Gallery"
-        />
-        <img
-          src="/image1.jpg"
-          className="object-cover h-full w-full rounded-md"
-          alt="Gallery"
-        />
-        <img
-          src="/image2.jpg"
-          className="object-cover h-full w-full rounded-md"
-          alt="Gallery"
-        />
+/>
+      ))}
+       
+    
       </div>
 
       <footer className="px-5 md:px-10 lg:px-10 xl:px-36 w-full gap-5 sm:max-w-full bg-[#151622] flex flex-col items-center justify-center">
@@ -49,7 +45,7 @@ function Footer() {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.instagram.com/ssf_kunnamangalam"
+            href="https://www.instagram.com/ssfpoonoor/"
           >
             <span
               className="text-xl lg:text-3xl iconify"
@@ -59,14 +55,14 @@ function Footer() {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.facebook.com/ssf_kunnamangalam"
+            href="https://www.facebook.com/https://www.facebook.com/ssfpoonoor/"
           >
             <span
               className="text-xl lg:text-3xl iconify"
               data-icon="mdi:facebook"
             ></span>
           </a>
-          <a href="https://sahithyolsavkgm.vercel.app">
+          <a href="https://poonoordivision-sahithyotsav.vercel.app">
             <span
               className="text-xl lg:text-3xl iconify"
               data-icon="mdi:web"
@@ -75,7 +71,7 @@ function Footer() {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.youtube.com/channel/ssf_kunnamangalam"
+            href="https://www.youtube.com/@SSFPOONOORDIVISION"
           >
             <span
               className="text-xl lg:text-3xl iconify"

@@ -7,10 +7,7 @@ import Footer from "./Footer.jsx";
 import ImageDownlad from "./ImageDownlad.jsx";
 import axios from "axios";
 
-import Home from "./Home.jsx";
 import Carousel from "./Carousel.jsx";
-
-
 
 function UserSide() {
   const [category, setCategory] = useState("");
@@ -19,7 +16,7 @@ function UserSide() {
   const [results, setResults] = useState(null);
   const [images, setImages] = useState([null, null, null]);
   const [color, setColor] = useState([null, null, null]);
-  const [buttonShow, setButtonShow]=useState(false)
+  const [buttonShow, setButtonShow] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,14 +29,13 @@ function UserSide() {
     };
 
     // Add the scroll event listener
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Clean up the event listener on component unmount
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    
     const fetchData = async () => {
       try {
         const response = await axios.get(`${baseUrl}/showImage`);
@@ -47,26 +43,19 @@ function UserSide() {
         console.log(data.image1.image); // Logging the fetched data
 
         const newImages = [
-          data.image1.image
-            ?data.image1.image
-            : null,
-            data.image2.image
-            ? data.image2.image
-            : null,
-          data.image3.image
-            ? data.image3.image
-            : null,
+          data.image1.image ? data.image1.image : null,
+          data.image2.image ? data.image2.image : null,
+          data.image3.image ? data.image3.image : null,
         ];
 
-        const newColor=[
-            data.image1.color? data.image1.color: null,
-            data.image2.color? data.image2.color: null,
-            data.image3.color?data.image3.color: null,
-        ]
+        const newColor = [
+          data.image1.color ? data.image1.color : null,
+          data.image2.color ? data.image2.color : null,
+          data.image3.color ? data.image3.color : null,
+        ];
 
         setImages(newImages);
-        setColor(newColor)
-  
+        setColor(newColor);
 
         // Logging the URLs directly
         newImages.forEach((image, index) => {
@@ -109,8 +98,6 @@ function UserSide() {
     }
   };
 
-
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -121,7 +108,7 @@ function UserSide() {
   const resultItem = "poppins-medium text-gray-600 -mt-1";
   return (
     <>
-     <Carousel/>
+      <Carousel />
 
       <div id="results" className="w-full text-center ">
         <h2 className="py-5 md:py-10 text-4xl lg:text-5xl  font-bold">
@@ -190,7 +177,6 @@ function UserSide() {
         )}
 
         <div
-        
           className={`grid grid-cols-1 px-4 py-6 sm:px-8 sm:py-8 overflow-scroll hide-scrollbar::-webkit-scrollbar hide-scrollbar  lg:px-20 lg:py-12 lg:grid-cols-2 xl:grid-cols-3 ${
             results ? "bg-slate-100" : ""
           } lg:px-28 `}
@@ -216,13 +202,11 @@ function UserSide() {
             image={images[2]}
             color={`text-${color[2]}`}
           />
-          
         </div>
-        
       </div>
 
-    <div className="flex justify-center">
-    {results == false && (
+      <div className="flex justify-center">
+        {results == false && (
           <div className="bg-yellow-100 border-l-4 mx-10 text-center border-yellow-500 text-yellow-700 p-4 mt-4 rounded-md">
             <h2 className="font-bold text-lg">Notice:</h2>
             <p className="mt-2">
@@ -231,19 +215,19 @@ function UserSide() {
             </p>
           </div>
         )}
-    </div>
+      </div>
       <Footer />
-    {buttonShow&&(
+      {buttonShow && (
         <button
-        onClick={scrollToTop}
-        className="flex items-center justify-center z-50 fixed bottom-10 right-10  size-11 bg-[#e8002c] text-white rounded-full"
-      >
-        <span
-          className="iconify text-xl lg:text-2xl"
-          data-icon="mdi:arrow-up"
-        ></span>
-      </button>
-    )}
+          onClick={scrollToTop}
+          className="flex items-center justify-center z-50 fixed bottom-10 right-10  size-11 bg-[#e8002c] text-white rounded-full"
+        >
+          <span
+            className="iconify text-xl lg:text-2xl"
+            data-icon="mdi:arrow-up"
+          ></span>
+        </button>
+      )}
       <Toaster />
     </>
   );

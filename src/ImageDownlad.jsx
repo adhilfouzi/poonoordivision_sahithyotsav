@@ -50,7 +50,7 @@ function ImageDownload({ results, color, category, selectedItem, image }) {
                 
               </div>
 
-              <div className="text-start mt-4">
+              <div className="text-start mt-4 pl-4">
                 {results.result.map((result, index) => (
                   <div key={index}>
                     <div className={`text-sm/[14px] poppins-medium ${color}`}>
